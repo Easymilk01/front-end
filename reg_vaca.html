@@ -1,28 +1,9 @@
-<DOCTYPE html>
+﻿<DOCTYPE html>
   <html>
   <head>
     <title> easy milk </title>
-    <style>
-input {
-  position: relative;
-
- left: 25%;
- top: 0%;
-}
-}
-#inputF{
-  position:relative;
-  left:30%;
-  top: 12%;
-}
-
-#textos{
-  color:white;
-  position: relative;
-  left:5%;
-  top:10%;
-}
-</style>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    
 <script>
 function confirmar(){
   alert("LA INFORMACIÓN HA SIDO REGISTRADA");
@@ -31,22 +12,45 @@ function confirmar(){
 </script>
 <meta charset="utf-8">
   </head>
-  <body bgcolor="131414">
+  <body>
   <font color="FFFFFF"><h1 align="center">EasyMailk</h1></font>
+  <div class="container">
+<form class="form-horizontal">
+<div class="form-group">
+<label for="inputID" class="col-sm-2 control-label"> NÚMERO VACA: </label>
+<div class="col-sm-10">
+<input required type="number" class="form-control" id="inputID" placeholder="Escribir numero vaca">
+</div>
+</div>
+<div class="form-group">
+<label for="inputBirthDate" class="col-sm-2 control-label"> FECHA DE NACIMIENTO: </label>
+<div class="col-sm-10">
+<input required type="date" class="form-control" id="inputBirthDate" placeholder="Escribir fecha de nacimiento">
+</div>
+</div>
 
-  <h3 id="textos">INGRESE ID DE LA VACA</h3>
-  <input type="text" name="ID_vaca">
+<div class="form-group">
+<label for="inputDate" class="col-sm-2 control-label"> FECHA DE COMPRA: </label>
+<div class="col-sm-10">
+<input required type="date" class="form-control" id="inputDate" placeholder="Escribir fecha de compra">
+</div>
+</div>
 
-<h3 id="textos">FECHA NACIMIENTO</h3>
-<input type="date" name="ID_vaca">
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<button type="submit" class="btn btn-danger"> confirmar
+</button>
+</div>
+</div>
+</form>
+</div>
 
-<h3 id="textos">FECHA DE COMPRA</h3>
-<input type="date" name="ID_vaca">
+
 
 <br>
 
-<button onclick="confirmar()">CONFIRMAR</button>
 
 
   </body>
+
   </html>
