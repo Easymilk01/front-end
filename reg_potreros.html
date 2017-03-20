@@ -1,47 +1,54 @@
 <DOCTYPE html>
   <html>
   <head>
-    <title> easy milk </title>
-    <style>
-input {
-  position: relative;
-
- left: 25%;
- top: 0%;
-}
-}
-
-#inputF{
-  position:relative;
-  left:30%;
-  top: 12%;
-}
-
-#textos{
-  color:white;
-  position: relative;
-  left:5%;
-  top:10%;
-}
-</style>
+    <title> Potreros </title>
+    <Link rel="stylesheet" href="css/bootstrap.min.css"/>
+   
 <script>
-function confirmar() {
-    alert("LA INFORMACIÓN HA SIDO REGISTRADA");
+function confirmar(){
+  alert("LA INFORMACIÓN HA SIDO REGISTRADA");
 }
+
 </script>
 <meta charset="utf-8">
   </head>
-  <body bgcolor="131414">
+  <body>
+  <font color="#01A9DB"><h1 align="center">EasyMilk</h1></font>
+  <font color="#045FB4"><h2 align="center">Registro de Potreros</h2></font>
+  <div class="container">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputID" class="col-sm-2 control-label">
+      Identificacion del potrero:
+    </label>
+    <div class="col-sm-10">
+    <input required="required" type="number" class="form-control" id="ïmputID" placeholder="Escribir el número de identificacion potrero">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputID" class="col-sm-2 control-label">
+      Ubicación/Descripción del potrero
+    </label>
+    <div class="col-sm-10">
+    <input required="required" type="text" class="form-control" id="ïmputID" placeholder="Ingresar Ubicación/Descripción">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputID" class="col-sm-2 control-label">
+      Area Mt2:
+    </label>
+    <div class="col-sm-10">
+    <input required type="number" class="form-control" id="ïmputID" placeholder="Ingresar área del potrero">
+    </div>
+  </div>
+  <div class="col-sm-offset-2 col-sm-10">
+  
+  <input type="submit" class="btn btn-info btn-block" value="Guardar">  
+  </div>
+</form>
+</div>
 
-    <h3 id="textos">INGRESE ID DEL POTRERO</h3>
-    <input type="text" name="ID_vaca">
 
-  <h3 id="textos">INGRESE LARGO DEL POTRERO</h3>
-  <input type="text" name="ID_vaca">
 
-  <h3 id="textos">INGRESE ANCHO DEL POTRERO</h3>
-  <input type="text" name="ID_vaca"><br>
-
-<button onclick="confirmar()">CONFIRMAR</button>
   </body>
   </html>
