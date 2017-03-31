@@ -1,0 +1,146 @@
+<html>
+<title>EasyMilk</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<Link rel="stylesheet" href="css/bootstrap.min.css"/>
+<head>
+<style>
+body {font-family: "Lato", sans-serif;}
+
+/* style del tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style de buttons en el tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Cambia background color del boton en hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Crea un active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style del tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* style de vertical menu */
+.vertical-menu {
+    width: 25%;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #045FB4;
+    color: white;
+}
+</style>
+</head>
+
+<body style="padding: 2%;">
+
+<div class="w3-container w3-light-blue" style="padding: 1%;">
+  <h1 style="color: #045FB4; text-align: center; "> EasyMilk </h1>
+</div>
+
+<div class="tab" style="padding-left: 25%">
+  <button class="tablinks" onclick="openMenu(event, 'Registros')" id="defaultOpen" >Registros</button>
+  <button class="tablinks" onclick="openMenu(event, 'Estadisticas')" >Estadisticas</button>
+  <button class="tablinks" onclick="openMenu(event, 'Noticias')" >Noticias</button>
+</div>
+
+<div style="width: 70%; color:#045FB4; position: absolute; margin-left: 25%; padding: 5%; font-size: xx-large;">
+<p id="help"></p>
+	</div>
+<input type="text" name="" id="asd" value="kaushfi" style="display: none;">
+
+<div class="vertical-menu" id="Registros">
+  <a href="#" class="active">Info</a>
+  <a href="reg_vaca.html" onmouseover="vaca()">Registro Vaca</a>
+  <a href="reg_potreros.html" onmouseover="potrero()">Registro Potrero</a>
+  <a href="reg_leche.html" onmouseover="leche()">Cantidad Leche</a>
+  
+</div>
+
+<div class="vertical-menu" id="Estadisticas">
+  <a href="#" class="active">Info</a>
+  <a href="#">Vacas</a>
+  <a href="#">potreros</a>
+  <a href="#">Leche</a>
+  
+</div>
+
+<div class="vertical-menu" id="Noticias">
+  <a href="#" class="active">Info</a>
+  <a href="#">Ganado</a>
+  <a href="#">Herramientas</a>
+  <a href="#">Calidad</a>
+  
+</div>
+
+
+<script>
+function vaca(){
+document.getElementById("help").innerHTML="Acá puede ingresar a los registros una nueva vaca, por nacimiento o por compra";
+}
+
+function potrero(){
+document.getElementById("help").innerHTML="Acá puede registrar los potreros organizandolo por area o por sector";
+}
+
+function leche(){
+document.getElementById("help").innerHTML="Acá puede ingresar a los registros la cantidad de leche";
+}
+
+function openMenu(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("vertical-menu");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

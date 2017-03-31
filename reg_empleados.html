@@ -1,6 +1,7 @@
 <DOCTYPE html>
   <html>
   <head>
+
     <title> registro de empleados </title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     
@@ -52,9 +53,6 @@ function confirmar(){
 <input required type="date" class="form-control" id="inputDate" placeholder="Escribir fecha de contratación">
 </div>
 </div>
-
-
-
 <div class="form-group">
 <div class="col-sm-offset--2 col-sm-10">
 <button type="submit" class="btn btn-success"> Registrar
@@ -69,6 +67,54 @@ function confirmar(){
 
 
 
+
+  </body>
+
+
+    <title>REGISTRO EMPLEADOS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <meta charset="utf-8">
+
+    <script>
+    function confirmar(){
+      alert("LA INFORMACIÓN HA SIDO REGISTRADA");
+    }
+    </script>
+
+  </head>
+  <body>
+    <font color="#045FB4"><h2 align="center">Registro Empleados</h2></font>
+    <div class="container">
+      <form clss="form-horizontal">
+        <div class="form-group">
+          <label for="NombreEmp" class="col-sm-10 control-label"> Nombre y apellidos: </label>
+          <div class="col-sm-3">
+            <input required="requiered" type="text" class="form-control" id="NombreEmp" placeholder="Nombre">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="EmpCedula" class="col-sm-10 control-label">Cedula: </label>
+          <div class="col-sm-3">
+            <input required="requiered" type="number" class="form-control" id="EmpCedula" placeholder="Cedula">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FechaNacimiento" class="col-sm-10 control-label">Fecha nacimiento</label>
+          <div class="col-sm-3">
+            <input required="required" type="date" class="form-control" id="FechaNacimiento" placeholder="Fecha Nacimiento">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Telefono" class="col-sm-10 control-label">Teléfono</label>
+          <div class="col-sm-3">
+            <input type="tel" class="form-control" id="Telefono" placeholder="teléfono">
+          </div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+          <input type="submit" class="btn btn-info btn-block" value="Guardar">
+        </div>  
+      </form>
+    </div>
 
   </body>
 
